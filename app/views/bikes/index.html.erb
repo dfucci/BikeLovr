@@ -1,0 +1,30 @@
+<div class="container">
+<h1>List of Bikes</h1>
+<div class="well">
+<ul>
+	<% @bikes.each do |b| %>
+	<li>
+		<%= "#{b.name} - #{b.description} $#{b.price}"  %>
+		<%= "contact the owner: #{b.user.name} #{b.user.email}"  %>
+	</li>
+		<% end %>
+</ul>
+</div>
+<% if user_signed_in? %>
+<%= form_tag("/bikes/add", :method=>"post") do %>
+<%= text_field_tag :bike_name %>
+<%= text_field_tag :bike_description %>
+<%= text_field_tag :bike_price %>
+<%= submit_tag "Add Bike", :class=>'btn' %>
+<% end %>
+<% else %>
+Register or sign in to post your bike.
+<% end %>
+
+<% if !flash[:error].nil? %>
+<div class="alert alert-error">
+<button type="button" class="close" data-dismiss="alert">×</button>
+<strong><%= flash[:error] %></strong>
+</div>
+<% end %>
+</div>
