@@ -5,7 +5,7 @@
 	<% @bikes.each do |b| %>
 	<li>
 		<%= "#{b.name} - #{b.description} $#{b.price}"  %>
-		<%= "contact the owner: #{b.user.name} #{b.user.email}"  %>
+	
 	</li>
 		<% end %>
 </ul>
