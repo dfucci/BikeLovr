@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'newrelic_rpm'
 
 gem 'rails', '3.2.8'
 
@@ -8,7 +9,7 @@ gem 'rails', '3.2.8'
 gem 'sqlite3'
 gem 'devise'
 gem 'json'
-
+gem 'simple_form', '2.0.0'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -17,12 +18,21 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
 
+group :development, :test do
+	gem 'rspec-rails', '2.8.0'
+	gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+	gem 'guard-rspec'
+end
+
+group :test do
+	gem 'rspec', '2.8.0'
+	gem "spork"
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

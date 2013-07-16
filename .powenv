@@ -1,0 +1,24 @@
+export PATH ; PATH="/Users/davi/.rvm/gems/ruby-1.9.3-p194/bin:/Users/davi/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/davi/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/davi/.rvm/bin:$PATH"
+export rvm_env_string ; rvm_env_string='ruby-1.9.3-p194'
+export rvm_path ; rvm_path='/Users/davi/.rvm'
+export rvm_ruby_string ; rvm_ruby_string='ruby-1.9.3-p194'
+unset rvm_gemset_name
+export RUBY_VERSION ; RUBY_VERSION='ruby-1.9.3-p194'
+export GEM_HOME ; GEM_HOME='/Users/davi/.rvm/gems/ruby-1.9.3-p194'
+export GEM_PATH ; GEM_PATH='/Users/davi/.rvm/gems/ruby-1.9.3-p194:/Users/davi/.rvm/gems/ruby-1.9.3-p194@global'
+export MY_RUBY_HOME ; MY_RUBY_HOME='/Users/davi/.rvm/rubies/ruby-1.9.3-p194'
+export IRBRC ; IRBRC='/Users/davi/.rvm/rubies/ruby-1.9.3-p194/.irbrc'
+unset MAGLEV_HOME
+unset RBXOPT
+export PATH ; PATH="/Users/davi/.rvm/gems/ruby-1.9.2-p290/bin:/Users/davi/.rvm/gems/ruby-1.9.2-p290@global/bin:/Users/davi/.rvm/rubies/ruby-1.9.2-p290/bin:/Users/davi/.rvm/bin:$PATH"
+export rvm_env_string ; rvm_env_string='ruby-1.9.2-p290'
+export rvm_path ; rvm_path='/Users/davi/.rvm'
+export rvm_ruby_string ; rvm_ruby_string='ruby-1.9.2-p290'
+unset rvm_gemset_name
+export RUBY_VERSION ; RUBY_VERSION='ruby-1.9.2-p290'
+export GEM_HOME ; GEM_HOME='/Users/davi/.rvm/gems/ruby-1.9.2-p290'
+export GEM_PATH ; GEM_PATH='/Users/davi/.rvm/gems/ruby-1.9.2-p290:/Users/davi/.rvm/gems/ruby-1.9.2-p290@global'
+export MY_RUBY_HOME ; MY_RUBY_HOME='/Users/davi/.rvm/rubies/ruby-1.9.2-p290'
+export IRBRC ; IRBRC='/Users/davi/.rvm/rubies/ruby-1.9.2-p290/.irbrc'
+unset MAGLEV_HOME
+unset RBXOPT

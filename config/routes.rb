@@ -1,4 +1,8 @@
 BikeLovr::Application.routes.draw do
+  get "pages/contact"
+
+  get "pages/about"
+
   devise_for :users
 
   resources :users
@@ -62,4 +66,5 @@ BikeLovr::Application.routes.draw do
   root :to => "bikes#index"
   get "bikes/index"
   match "bikes/add" => "bikes#add", :via=>'post'
+  match 'bikes/new' => "bikes#new", :as=>:create
 end

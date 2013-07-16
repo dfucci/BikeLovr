@@ -1,20 +1,13 @@
-<%= form_for @bike, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="control-group">
-    <%= f.label :name, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :name, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :description, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :description, :class => 'text_field' %>
-    </div>
-  </div>
+<% if user_signed_in? %>
+<%= simple_form_for create_url, :method => 'post', :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :title, :input_html => { :class => "span3" } %>
+  <%= f.input :description, :input_html => { :rows => "6", :class=>'span6' }, :as=>:text %>
+  <div class="controls-group">
+  <%= f.input :price, :wrapper => :prepend do %>
+  <span class="add-on">€</span><%= f.input_field :price %>
+<% end %>
+</div>
+  <%= f.submit "Find!", :class => "btn" %>
+<% end %>
 
-  <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                bikes_path, :class => 'btn' %>
-  </div>
 <% end %>

@@ -3,7 +3,8 @@ class BikesController < ApplicationController
   def index
   	@bikes = Bike.all
   end
-
+  def new
+  end
   def add
   	name = params[:bike_name]
   	description = params[:bike_description]
@@ -15,3 +16,4 @@ class BikesController < ApplicationController
   	redirect_to "/bikes/index"
   end
 end
+
