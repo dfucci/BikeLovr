@@ -6,6 +6,7 @@ BikeLovr::Application.routes.draw do
   devise_for :users
 
   resources :users
+  resources :bikes
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -64,7 +65,4 @@ BikeLovr::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   root :to => "bikes#index"
-  get "bikes/index"
-  match "bikes/add" => "bikes#add", :via=>'post'
-  match 'bikes/new' => "bikes#new", :as=>:create
 end

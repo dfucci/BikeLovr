@@ -4,16 +4,15 @@ class BikesController < ApplicationController
   	@bikes = Bike.all
   end
   def new
+    @bike = Bike.new
   end
-  def add
-  	name = params[:bike_name]
-  	description = params[:bike_description]
-  	price = params[:bike_price]
-  	bike = Bike.add_bike(name, description, price)
-  	if !bike.valid? 
+  def create
+
+    bike = Bike.new(params[:bike])
+  	if !bike.save
   		 flash[:error] = bike.errors.full_messages.join("<br>").html_safe
   	end
-  	redirect_to "/bikes/index"
+  	redirect_to bikes_path
   end
 end
 
