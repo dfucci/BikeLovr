@@ -4,7 +4,8 @@
 <ul>
 	<% @bikes.each do |b| %>
 	<li>
-		<%= "#{b.name} - #{b.description} $#{b.price}"  %>
+		<%= "#{b.name} - #{b.description} $#{b.price}, by" %> 
+		 <%= link_to b.user.name, user_path(b.user) %>
 	
 	</li>
 		<% end %>

@@ -1,5 +1,5 @@
 class Bike < ActiveRecord::Base
-  attr_accessible :description, :name, :price
+  attr_accessible :description, :name, :price, :user_id
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true

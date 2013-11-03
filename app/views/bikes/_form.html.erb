@@ -4,10 +4,12 @@
   <%= f.input :description, :input_html => { :rows => "6", :class=>'span6' }, :as=>:text %>
   <div class="controls-group">
   <%= f.input :price, :wrapper => :prepend do %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
   <span class="add-on">€</span><%= f.input_field :price %>
 <% end %>
 </div>
   <%= f.submit "Go!", :class => "btn" %>
+
 <% end %>
 
 <% end %>

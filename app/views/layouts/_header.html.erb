@@ -1,7 +1,4 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-
-
-
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -15,7 +12,7 @@
             <%= link_to "Sign out", destroy_user_session_path, :method=>:delete %>
           </li>
           <li>
-            <%= link_to create_url do %>
+            <%= link_to new_bike_path do %>
                 <i class="icon-plus-sign icon-white pull-right"></i><strong>Add your bike!</strong>
             <% end %>
           
