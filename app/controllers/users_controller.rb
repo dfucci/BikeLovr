@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_filter :authenticate_user!, :except => [:show, :index]
+  before_filter :correct_user, :except => [:index, :show]
   # GET /users
   # GET /users.json
   def index
@@ -80,4 +83,9 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  protected
+    def correct_user
+      user = User.find(params[:id]) if params[:id]
+      redirect_to root_path unless current_user.id == user.id
+    end
 end
