@@ -22,14 +22,17 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
-	gem 'rspec-rails', '2.8.0'
 	gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
-	gem 'guard-rspec'
+  gem 'guard-rspec', '4.3.1'
+  gem 'guard-zeus'
 end
 
 group :test do
-	gem 'rspec', '2.8.0'
-	gem "spork"
+	gem 'rspec-rails', '3.1.0'
+	gem 'rspec', '3.1.0'
+  gem 'capybara'
+  gem 'factory_girl_rails', '4.2.0'
+  gem 'spork'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

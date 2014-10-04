@@ -2,7 +2,7 @@ class Bike < ActiveRecord::Base
   attr_accessible :description, :name, :price, :user_id
   validates :name, presence: true
   validates :description, presence: true
-  validates :price, presence: true
+  validates :price, presence: true, numericality:{greater_than: 0}
   belongs_to :user
 
   def self.add_bike(name, description, price)
