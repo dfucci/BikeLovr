@@ -171,7 +171,6 @@ GEM
       actionpack (~> 3.0)
       activemodel (~> 3.0)
     slop (3.6.0)
-    spork (0.9.2)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -224,7 +223,6 @@ DEPENDENCIES
   rspec-rails (= 3.1.0)
   sass-rails
   simple_form (= 2.0.0)
-  spork
   sqlite3
   therubyracer
   twitter-bootstrap-rails

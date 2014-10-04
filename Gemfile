@@ -32,7 +32,6 @@ group :test do
 	gem 'rspec', '3.1.0'
   gem 'capybara'
   gem 'factory_girl_rails', '4.2.0'
-  gem 'spork'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
