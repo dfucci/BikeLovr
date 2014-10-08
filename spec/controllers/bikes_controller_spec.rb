@@ -20,19 +20,27 @@ describe BikesController do
       response.status.should be 200
     end
   end
-   describe "Editing a bike" do
-     it "should not be accessibe to an unauthenticated user" do
-       bike = FactoryGirl.create(:bike)
-       get :edit,{:id => bike.id}
-       response.status.should be 302
-     end
-      it "should be possible for the owner of the bike" do
-        user = FactoryGirl.build(:user)
-        request.env['warden'].stub :authenticate! => user
-        bike = FactoryGirl.create(:bike)
-        get :edit, id: bike.id
-        response.status.should be 200
-      end
-   end
+  describe "Editing a bike" do
+    it "should not be accessibe to an unauthenticated user" do
+      bike = FactoryGirl.create(:bike)
+      get :edit,{:id => bike.id}
+      response.status.should be 302
+    end
+    it "should be possible for the owner of the bike" do
+      user = FactoryGirl.build(:user)
+      request.env['warden'].stub :authenticate! => user
+      bike = FactoryGirl.create(:bike)
+      get :edit, id: bike.id
+      response.status.should be 200
+    end
+    it "should not be possible for a user that does not own the bike" do
+      user = FactoryGirl.build(:user)
+      request.env['warden'].stub :authenticate! => user
+      bike = FactoryGirl.create(:bike)
+      user2 = FactoryGirl.build(:user)
+      get :edit, id: bike.id
+      response.status.should be 302
+    end
+  end
 
 end
