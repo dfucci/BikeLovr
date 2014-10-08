@@ -63,6 +63,8 @@ GEM
     factory_girl_rails (4.2.0)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     ffi (1.9.5)
     formatador (0.2.5)
     guard (2.6.1)
@@ -212,6 +214,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   factory_girl_rails (= 4.2.0)
+  faker
   guard-rspec (= 4.3.1)
   guard-zeus
   jquery-rails
