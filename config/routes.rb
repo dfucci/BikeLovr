@@ -7,8 +7,9 @@ BikeLovr::Application.routes.draw do
 
   resources :users
   resources :bikes
-
+  post 'bikes/:id' => 'bikes#update'
   # The priority is based upon order of creation:
+
   # first created -> highest priority.
 
   # Sample of regular route:
