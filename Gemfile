@@ -6,6 +6,7 @@ gem 'rails', '3.2.19'
 
 gem 'sqlite3'
 gem 'devise'
+gem 'cancan'
 gem 'json'
 gem 'simple_form', '2.0.0'
 # Gems used only for assets and not required
@@ -38,7 +39,7 @@ end
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+# Usergem 'jbuilder'
 
 # Use unicorn as the app server
 # gem 'unicorn'

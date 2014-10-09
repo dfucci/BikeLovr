@@ -27,19 +27,16 @@ describe BikesController do
       response.status.should be 302
     end
     it "should be possible for the owner of the bike" do
-      user = FactoryGirl.build(:user)
-      request.env['warden'].stub :authenticate! => user
-      bike = FactoryGirl.create(:bike)
-      get :edit, id: bike.id
+      user = FactoryGirl.create(:user_with_bike)
+      sign_in user
+      get :edit, id: user.bikes.first.id
       response.status.should be 200
     end
     it "should not be possible for a user that does not own the bike" do
-      user = FactoryGirl.build(:user)
-      request.env['warden'].stub :authenticate! => user
+      user = FactoryGirl.create(:user, email: "solonoi@gooc.com")
+      sign_in user
       bike = FactoryGirl.create(:bike)
-      user2 = FactoryGirl.build(:user)
-      get :edit, id: bike.id
-      response.status.should be 302
+      lambda { get :edit, id: bike.id}.should raise_error
     end
   end
 

@@ -1,6 +1,6 @@
 class BikesController < ApplicationController
   before_filter :authenticate_user!, :except => [:show, :index]
-  before_filter :check_ownership, :except => [:show, :index, :new, :create]
+  #before_filter :check_ownership, :except => [:show, :index, :new, :create]
   def index
   	@bikes = Bike.all
   end
@@ -24,6 +24,7 @@ class BikesController < ApplicationController
 
   def edit
     @bike = Bike.find params[:id]
+    authorize! :edit, @bike
   end
 
   def update
