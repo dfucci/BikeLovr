@@ -1,7 +1,8 @@
 FactoryGirl.define do
-  factory :bike do
-    name     "Michael Hartl"
-    description    "michael@example.com"
-    price 20
+  factory :bike do 
+    name "Viking"
+    description "My fav bike"
+    price 200
+    user
   end
 end
