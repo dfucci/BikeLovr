@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(:version => 20141015183728) do
   create_table "bikes", :force => true do |t|
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
     t.decimal  "price"
     t.integer  "user_id"
-    t.string   "picture"
+    t.string   "picture",     :default => ""
   end
 
   create_table "users", :force => true do |t|
