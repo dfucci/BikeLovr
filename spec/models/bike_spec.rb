@@ -6,7 +6,10 @@ describe Bike do
   it "has a valid name" do
     FactoryGirl.build(:bike, name:nil).should_not be_valid
   end
-
+  it "can have a picture" do
+    FactoryGirl.build(:bike).should be_valid
+    FactoryGirl.build(:bike, picture:nil, user:nil).should be_valid
+  end
   context "price" do
     it "is valid" do
       FactoryGirl.build(:bike, price:nil).should_not be_valid

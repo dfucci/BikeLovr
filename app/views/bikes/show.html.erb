@@ -8,6 +8,7 @@
   <dd><%= @bike.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @bike.description %></dd>
+  <%= image_tag(@bike.picture_url, :width => 300) if @bike.picture.present? %>
 </dl>
 
 <div class="form-actions">
